@@ -1,15 +1,15 @@
-import "./scss/globals.scss";
+import './scss/globals.scss'
 
 export const metadata = {
-  title: "RESIST",
-  description: "Fight back.",
-};
+  title: 'RESIST',
+  description: 'Fight back.',
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
-        {children}
+          {children}
       </body>
     </html>
   );

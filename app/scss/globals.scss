@@ -2,12 +2,17 @@
 
 @font-face {
   font-family: 'FiraCode';
-  src: url('/fonts/FiraCode-VF.ttf');
+  src: url('/fonts/firacode.ttf');
 }
 
 @font-face {
   font-family: 'PublicSans';
-  src: url('/fonts/PublicSans-Italic-VF.ttf');
+  src: url('/fonts/publicsans.ttf');
+}
+
+@font-face {
+  font-family: 'PublicSansItalic';
+  src: url('/fonts/publicsansitalic.ttf');
 }
 
 
@@ -15,8 +20,22 @@ html, body {
   font-family: variables.$font-body;
   font-size: 20px;
   line-height: 1.66;
-  background: #111;
-  color: #fff;
+  background: variables.$background-color-dark;
+  color: variables.$text-color-dark;
+
+  @media (prefers-color-scheme: light) {
+    background: variables.$background-color-light;
+    color: variables.$text-color-light;
+  }
+
+  &.force-light-mode {
+    background: variables.$background-color-light !important;
+    color: variables.$text-color-light !important;
+  }
+  &.force-dark-mode {
+    background: variables.$background-color-dark !important;
+    color: variables.$text-color-dark !important;
+  }
 }
 
 main {
